@@ -1,4 +1,4 @@
-Interest Rates: More Than Just a Number
+MODULE 1.1:Interest Rates: More Than Just a Number
 The book says interest rates can be seen in a few ways:
 
 Required Rate of Return: Imagine you're lending money to someone. You'd want not just your money back, but a little extra for letting them use it and for the risk you're taking, right? That "little extra" is like a required rate of return. Investors need this to be willing to lend their money or invest.
@@ -24,4 +24,98 @@ So, a typical interest rate you see (like on a company bond) would be:
 Nominal Rate of Interest = Real Risk-Free Rate + Inflation Premium + Default Risk Premium + Liquidity Premium + Maturity Premium 
 
 This part basically tells us that interest rates are not arbitrary; they reflect the cost of time, the expectation of inflation, and compensation for various risks.
+
+=============================================================================================================================================================
+
+
+
+MODULE 1.2: TIME-WEIGHTED AND MONEY-WEIGHTED RETURNS.
+
+This module is all about figuring out how well an investment portfolio has performed, but it looks at performance in two different ways, especially when money is being added to or taken out of the portfolio.
+
+Money-Weighted Rate of Return (MWRR)
+Imagine you have an investment account. You put money in, maybe you add more later, and perhaps you take some out. The Money-Weighted Rate of Return (MWRR) calculates the actual return you earned on your specific invested money, considering when you put money in and when you took it out.
+
+It's basically the Internal Rate of Return (IRR) for your portfolio's cash flows.
+Think of it like this: The MWRR is the interest rate that makes the present value of all the money you put in (including the starting amount) equal to the present value of all the money you took out (including the ending amount and any withdrawals).
+The timing and size of these cash flows heavily influence this rate.
+Let's elaborate on the book's example:
+
+Scenario:
+
+Time 0 (Start of Year 1): You buy 1 share of stock for $100. (This is like an outflow from your pocket, or an inflow into the investment account).
+End of Year 1: The stock paid you a $2 dividend (on the 1 share you own). You then buy another share for $120.
+So, at the end of Year 1, you effectively had a cash inflow of $2 (dividend) and then an outflow of $120 (new share purchase).
+The net cash flow for you at this point is: $2 (dividend) - $120 (cost of new share) = -$118. Or, from the account's perspective, it received $118 from you (plus it generated $2 from the stock).
+End of Year 2: You now own 2 shares. Each share paid a $2 dividend. So, you receive $2/share * 2 shares = $4 in dividends. You then sell both shares for $130 each, so you get 2 * $130 = $260 from the sale.
+Total cash inflow to you at the end of Year 2 is $4 (dividends) + $260 (sale proceeds) = $264.
+Calculating MWRR:
+To find the MWRR, we're looking for a rate (let's call it 'r') such that:
+$100 (initial investment) + $118 (net investment at end of year 1) / (1+r) = $264 (what you got back at end of year 2) / (1+r)^2
+(This is a slightly simplified way to think about the cash flows from the investor's perspective, focusing on net contributions and withdrawals. The book sets it up for a calculator using the account's cash flows: initial value as inflow, deposits as inflows, withdrawals as outflows, and ending value as an outflow if you were to close the account.)
+
+The book shows the cash flows from the account's perspective:
+
+CF0 (Time 0): +$100 (You deposited $100)
+CF1 (End of Year 1): Dividend was $2. You bought another share for $120. So, your net deposit was $120 - $2 = $118. So, +$118.
+CF2 (End of Year 2): Dividends were $4 (2 shares * $2). You sold both shares for $260 (2 shares * $130). Total value taken out is $260 + $4 = $264. So, -$264 (money leaving the account).
+Using a financial calculator, the MWRR is 13.86%.
+
+What this 13.86% means: It means that your specific investment decisions (buying that second share at $120) and the timing of those cash flows resulted in an overall return of 13.86% per year on the money you had in the account. If you had put in more money right before the stock did really well, your MWRR would be higher. If you put in more money right before it did poorly, your MWRR would be lower.
+
+Time-Weighted Rate of Return (TWRR)
+The Time-Weighted Rate of Return (TWRR) aims to measure the performance of the investment itself, removing the effects of when you added or withdrew money. It tells you how much $1 would have grown if left in the investment over the entire period, regardless of your personal deposit/withdrawal activity.
+
+
+This is the method preferred by the investment industry to judge how well a portfolio manager is doing, because the manager often doesn't control when clients put money in or take it out.
+
+Here’s how it’s calculated, using the same example:
+
+Step 1: Break the period into subperiods based on when significant cash flows occur.
+
+Subperiod 1 (Year 1): From Time 0 to End of Year 1 (just before you buy the second share).
+Subperiod 2 (Year 2): From End of Year 1 (just after you buy the second share) to End of Year 2.
+Step 2: Calculate the Holding Period Return (HPR) for each subperiod.
+
+Subperiod 1 (Year 1):
+
+Beginning value: $100 (1 share)
+Dividend received during Year 1: $2 (on that 1 share)
+Value just before the next cash flow (i.e., before you buy the second share at $120 at the end of Year 1): The share price is now $120.
+HPR1 = (Ending Value + Cash Flow Received - Beginning Value) / Beginning Value HPR1 = ($120 + $2 - $100) / $100 = $22 / $100 = 0.22 or 22%
+Subperiod 2 (Year 2):
+
+Beginning value (after you bought the second share): You now have 2 shares. The first was worth $120, and you bought the second for $120. So, total value is $120 (share 1) + $120 (share 2) = $240.
+Dividends received during Year 2: $2/share * 2 shares = $4.
+Ending value (you sold both for $130 each): 2 * $130 = $260.
+HPR2 = (Ending Value + Cash Flow Received - Beginning Value) / Beginning Value HPR2 = ($260 + $4 - $240) / $240 = $24 / $240 = 0.10 or 10%
+Step 3: Compound the returns to get the TWRR.
+
+TWRR = [(1 + HPR1) * (1 + HPR2) * ... * (1 + HPRn)] - 1
+TWRR = [(1 + 0.22) * (1 + 0.10)] - 1 TWRR = [1.22 * 1.10] - 1 TWRR = [1.342] - 1 TWRR = 0.342 or 34.2% (This is the total return over 2 years)
+To get the annual TWRR, we find the geometric mean:
+
+Annual TWRR = (1.342)^(1/2) - 1 Annual TWRR = 1.1584 - 1 = 0.1584 or 15.84% 
+Comparing MWRR and TWRR
+Notice the difference:
+
+MWRR = 13.86%
+TWRR = 15.84%
+Why are they different? 
+The MWRR (13.86%) is lower than the TWRR (15.84%).
+Let's look at the subperiod returns:
+
+Year 1 return (HPR1) was 22% (good performance).
+Year 2 return (HPR2) was 10% (not as good).
+In the MWRR calculation, the second year's lower performance (10%) received a greater weight because there was more money in the account during Year 2 ($240 at the start of Year 2 vs. $100 at the start of Year 1). You bought that extra share right before a period of relatively lower return.
+
+If you contribute a lot of money just before a period of poor performance, your MWRR will be lower than your TWRR.
+If you contribute a lot of money just before a period of good performance, your MWRR will be higher than your TWRR.
+When to use which:
+
+TWRR: Use this when you want to evaluate the skill of the investment manager or the inherent performance of the investment strategy itself, without the influence of when money was added or removed. This is the industry standard for comparing managers.
+MWRR: This tells an investor what their actual personal rate of return was, given their specific timing of investments and withdrawals. It's more relevant if the manager does have control over the timing of cash flows into and out of the portfolio.
+Essentially, TWRR measures the performance of the investment, while MWRR measures the performance of the investor's money given their cash flow decisions.
+
+================================================================================================================================================================================================
 
