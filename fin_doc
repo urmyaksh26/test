@@ -119,3 +119,122 @@ Essentially, TWRR measures the performance of the investment, while MWRR measure
 
 ================================================================================================================================================================================================
 
+MODULE 1.3: COMMON MEASURES OF RETURN.
+
+This module focuses on standard ways to express and adjust investment returns so they can be easily understood, compared, and used in different calculations.
+
+Annualized Returns
+Often, you might earn a return over a period that isn't exactly one year (e.g., 90 days, or 500 days). To compare these returns with others, or to use them in annual financial planning, we convert them into an annualized return. This tells you what the return would have been if it had continued at the same rate for a full year. 
+
+How to calculate it:
+The basic idea is to figure out your return for the period you held the investment (this is your Holding Period Return, HPR) and then scale it up or down to a 365-day year.
+
+The formula given is: Annualized Return = (1 + HPR)^(365/days) - 1 
+Where 'days' is the number of days you held the investment.
+
+Example 1: Shorter than one year 
+
+You deposit $100.
+After 90 days, your account balance is $100.75.
+Calculate your HPR for the 90 days:
+HPR = (Ending Value / Beginning Value) - 1
+HPR = ($100.75 / $100) - 1 = 1.0075 - 1 = 0.0075 (or 0.75%)
+
+Annualize it:
+Annualized Return = (1 + 0.0075)^(365/90) - 1
+Annualized Return = (1.0075)^4.0555 - 1
+Annualized Return = 1.03056 - 1 = 0.03056 or 3.056%
+
+So, earning 0.75% over 90 days is equivalent to earning about 3.056% over a full year, assuming the same rate of return.
+
+Example 2: Longer than one year 
+
+An investor buys a 500-day government bill for $970.
+At maturity (after 500 days), they redeem it for $1,000. 
+Calculate your HPR for the 500 days:
+HPR = ($1,000 / $970) - 1
+HPR = 1.0309278 - 1 = 0.0309278 (or about 3.09%)
+
+Annualize it:
+Annualized Return = (1 + 0.0309278)^(365/500) - 1
+Annualized Return = (1.0309278)^0.73 - 1
+Annualized Return = 1.02249 - 1 = 0.02249 or 2.249% 
+
+In this case, because the holding period was longer than a year, the annualized return is lower than the HPR for the 500-day period. You're essentially spreading that 3.09% gain over a shorter, 365-day equivalent period.
+
+The Effect of Compounding Frequency (A Quick Refresher)
+The book briefly touches on how the frequency of compounding (how often interest is calculated and added to the principal) affects values. 
+
+More frequent compounding leads to a higher Future Value (FV): If you invest $100 at 10% annual interest, you get $110 after a year. If it's compounded semi-annually (5% every 6 months), you get $100 * (1.05) = $105 after 6 months, and then $105 * (1.05) = $110.25 after the year. That extra $0.25 is because you earned interest on the first period's interest.
+More frequent compounding leads to a lower Present Value (PV): If you need $100 in a year, you'd have to invest less today if the interest is compounded more frequently.
+The book shows how the PV of $1,000 to be received in one year at a 6% stated annual rate decreases as compounding frequency increases (from semi-annual to daily).  This is because the "effective" annual rate becomes slightly higher with more frequent compounding.
+
+Continuously Compounded Returns
+This takes the idea of compounding frequency to its extreme. What if you compounded interest every second? Every millisecond? The mathematical limit of this is continuous compounding. 
+
+Why use it?
+Continuously compounded returns have a neat mathematical property: they are additive over time.  If you have a continuously compounded return for Period 1 and another for Period 2, you can just add them together to get the continuously compounded return for the combined period (Period 1 + Period 2). This isn't true for simple percentage returns that are not continuously compounded. This property is very useful in financial modeling, especially for derivatives.
+
+How to calculate it:
+Given a simple Holding Period Return (HPR), the continuously compounded return (often denoted Rcc) is:
+Rcc = ln(1 + HPR)
+where 'ln' is the natural logarithm. 
+
+You can also calculate it from the price relative (Ending Price / Beginning Price):
+Rcc = ln(Ending Price / Beginning Price) 
+
+Example: 
+
+Stock purchased for $100.
+Sold one year later for $120. 
+Simple HPR: ($120 / $100) - 1 = 0.20 or 20%.
+
+Continuously Compounded Return:
+Rcc = ln(1 + 0.20) = ln(1.20) = 0.18232 or 18.232% 
+
+Notice the continuously compounded return (18.232%) is slightly less than the simple HPR (20%). This is typical. To get a 20% return at the end of the year with continuous compounding, you'd start with a slightly lower continuously compounded rate.
+
+Other Major Return Measures
+These are mostly definitions to distinguish how returns are reported:
+
+Gross Return vs. Net Return: 
+
+Gross Return: Total return before deducting fees for management and administration of the investment account.  It does account for trading commissions and costs directly needed to make the investments. 
+
+Net Return: The return after management and administration fees have been deducted.  This is what the investor actually gets.
+Elaborated Example: Imagine a mutual fund reports a 10% return. If this is before they took out their 1% management fee, then 10% is the gross return. Your net return, what your account actually grew by from the fund's management perspective, would be 10% - 1% = 9%.
+
+Pretax Nominal Return vs. After-tax Nominal Return: 
+
+
+Pretax Nominal Return: Your return before any taxes are paid on it (e.g., on dividends or capital gains). 
+After-tax Nominal Return: Your return after taxes have been taken out.  This shows the actual increase in your wealth that you can spend or reinvest.
+Elaborated Example: If your investment earned a nominal return of 8% (pretax nominal return), and your tax rate on this investment income is 25%, then the tax amount is 25% of 8% = 2%. Your after-tax nominal return is 8% - 2% = 6%.
+
+Real Return: 
+This return is adjusted for inflation. It tells you how much your purchasing power has actually increased. 
+
+
+Approximate Real Return = Nominal Return - Inflation Rate 
+Exact Real Return = [(1 + Nominal Return) / (1 + Inflation Rate)] - 1 
+Elaborated Example:
+
+You earn a nominal return of 7%.
+Inflation during the year is 2%.
+Approximate Real Return = 7% - 2% = 5%. 
+Exact Real Return = [(1 + 0.07) / (1 + 0.02)] - 1 = [1.07 / 1.02] - 1 = 1.04902 - 1 = 0.04902 or 4.902%.  Your investments grew by 7%, but since prices of goods and services went up by 2%, your actual ability to buy more stuff only increased by about 4.9%.
+Leveraged Return: 
+This refers to the return you get when you use borrowed money (leverage) to make an investment. The return is calculated on your own cash invested, not the total value of the investment.  Leverage can magnify both gains and losses.
+
+
+Elaborated Example (from the concept, not a direct numerical one in this section of the book):
+Suppose you have $1,000 of your own money.
+
+Scenario A (No Leverage): You invest your $1,000 in a stock, and it goes up by 10%. You make $100. Your return on your cash invested is $100 / $1,000 = 10%.
+Scenario B (With Leverage): You invest your $1,000 and borrow an additional $1,000 (let's say at 5% interest for the period). You invest the total $2,000 in the same stock, and it goes up by 10%.
+Your total investment of $2,000 is now worth $2,200 (a $200 gain).
+You have to pay back the $1,000 loan plus $50 interest ($1,000 * 5%). So, $1,050.
+Your profit is $2,200 (investment value) - $1,050 (loan repayment) - $1,000 (your initial cash) = $150.
+Your leveraged return on your $1,000 cash is $150 / $1,000 = 15%. Your return is higher than the 10% the stock made because of leverage. (The book provides a formula: Leveraged Rate of Return = r + [VB/V0 * (r - rB)] where r is the return on the total investment, VB is the amount borrowed, V0 is your equity, and rB is the borrowing rate. )
+These common measures help standardize how returns are discussed and ensure everyone is on the same page about what a particular return figure represents
+
