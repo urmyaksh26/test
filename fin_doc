@@ -238,3 +238,355 @@ Your profit is $2,200 (investment value) - $1,050 (loan repayment) - $1,000 (you
 Your leveraged return on your $1,000 cash is $150 / $1,000 = 15%. Your return is higher than the 10% the stock made because of leverage. (The book provides a formula: Leveraged Rate of Return = r + [VB/V0 * (r - rB)] where r is the return on the total investment, VB is the amount borrowed, V0 is your equity, and rB is the borrowing rate. )
 These common measures help standardize how returns are discussed and ensure everyone is on the same page about what a particular return figure represents
 
+
+==============================================================================================================================================
+
+MODULE 2.1: DISCOUNTED CASH FLOW (DCF) VALUATION
+
+What Is “Discounted Cash Flow” (DCF)?
+“Money you will get in the future is worth less than money you have today.”
+
+This is because of opportunity cost—you could use or invest today’s money to grow more.
+
+DCF helps you calculate:
+"How much is ₹100 that I’ll get in 3 years worth today?"
+
+The Formula:
+If you expect to receive ₹100 in 1 year, and interest rate is 10%:
+
+💡 Present Value (PV) = ₹100 ÷ (1 + 10%) = ₹100 ÷ 1.10 = ₹90.91
+This means:
+
+₹100 in 1 year is worth ₹90.91 today
+(if you could earn 10% interest elsewhere)
+
+DCF for Different Investments:
+1. Zero-Coupon Bond
+No interest payments
+
+Only pays one big amount at maturity
+
+🧾 Example:
+If you’ll get ₹1,000 after 3 years, and rate = 6%:
+
+PV = ₹1,000 ÷ (1 + 6%)³ = ₹839.62
+So, you’ll pay ₹839.62 today to get ₹1,000 after 3 years.
+
+2. Coupon Bond
+(This pays interest every year)
+
+Suppose it gives ₹100 per year for 3 years
+
+Plus ₹1,000 at the end (final payment)
+
+You discount each payment separately:
+
+Year 1: ₹100 ÷ (1 + r)^1
+
+Year 2: ₹100 ÷ (1 + r)^2
+
+Year 3: ₹1,100 ÷ (1 + r)^3
+(Add them all = total value today)
+
+3. Preferred Stock (fixed dividend forever)
+Like a bond but no maturity — just regular payments
+
+🧾 Example:
+
+Pays ₹8 every year, forever
+
+Market wants a 10% return
+
+PV = ₹8 ÷ 10% = ₹80
+So, this stock is worth ₹80 today.
+
+4. Common Stock (dividends may grow)
+If dividend grows every year, use this:
+
+PV = Dividend next year ÷ (Return % − Growth %)
+
+🧾 Example:
+
+Next year’s dividend = ₹2
+
+Expected return = 12%, Growth = 4%
+
+PV = ₹2 ÷ (12% − 4%) = ₹2 ÷ 0.08 = ₹25
+
+5. Loan Payments (Annuity)
+If you borrow ₹2,000 and repay over 5 years with equal payments and 6% interest:
+
+Use the calculator or formula to find payment = ₹473.86
+Each payment includes part interest + part principal.
+
+🧠 Key Takeaway
+DCF helps you figure out how much future cash is worth today.
+
+Whether it’s a bond, stock, or loan — if money is coming (or going) in the future, DCF tells you how much to pay or expect today.
+
+=======================================================================================================================================
+
+MODULE 2.2: IMPLIED RETURNS AND CASH FLOW ADDITIVITY
+This module focuses on two things:
+
+How to calculate the return (interest rate) an investment is giving you — even if it’s not directly stated.
+
+Why we can simply “add” future cash flows to get the total value — this is called the cash flow additivity principle.
+
+Implied Return – What Return Am I Getting?
+💡 What does "implied" mean?
+It means the return isn’t given to you directly, but you can calculate it from the price and cash flows.
+
+🧾 Example: Zero-Coupon Bond
+You buy a bond for ₹650 today.
+It pays you ₹1,000 after 5 years.
+
+You want to know: “What return am I getting?”
+
+Cash Flow Additivity Principle
+💡 Simple Definition:
+“The value of a bunch of future cash flows = the sum of the value of each cash flow.”
+
+🧾 Why is this useful?
+Because you can break big cash flows into smaller parts, and add them back up. It still gives the same value.
+
+🧾 Example:
+You’re promised:
+
+₹100 in 1 year
+
+₹200 in 2 years
+
+₹300 in 3 years
+
+Discount rate = 10%
+
+You calculate the present value (PV) of each:
+
+₹100 ÷ (1.10)^1 = ₹90.91
+
+₹200 ÷ (1.10)^2 = ₹165.29
+
+₹300 ÷ (1.10)^3 = ₹225.39
+
+Add all the PVs:
+
+Total PV = ₹481.59
+
+This is the value today of all those future cash flows.
+
+🔁 Why is this powerful?
+It’s the basis for:
+
+Bond pricing
+
+Loan valuation
+
+Stock valuation
+
+Option pricing
+
+Forward contracts
+
+All these use the same idea: Break cash flows → Discount them → Add them
+
+✅ Real-World Uses of Additivity
+1. Forward Interest Rates
+If you know today's interest rates for 1 year and 2 years, you can use them to find the interest rate for Year 2 only.
+
+2. Currency Forward Rates
+If you know interest rates in India and the US, and today’s USD/INR rate, you can calculate the future USD/INR rate — to avoid arbitrage (risk-free profit).
+
+3. Option Pricing (Binomial Models)
+Even complex things like stock options use this — break possible outcomes into pieces, discount them, and add.
+
+=========================================================================================================================================
+
+MODULE 3.1: CENTRAL TENDENCY AND DISPERSION
+This topic is about how to describe and understand data, especially returns on investments. It teaches you how to summarize numbers using:
+
+Central Tendency → Where the center of data is (average)
+
+Dispersion → How spread out the data is (risk/volatility)
+
+✅ PART 1: Central Tendency
+💡 What is it?
+It tells you the “typical” value of a dataset — basically, the average return.
+
+🔢 1. Mean (Average)
+Add all the values and divide by how many there are.
+
+🧾 Example:
+Returns = 5%, 7%, 9%
+
+Mean = (5 + 7 + 9) ÷ 3 = 7%
+
+🔢 2. Median
+The middle value when numbers are arranged in order.
+
+🧾 Example:
+Returns = 3%, 5%, 8% → Median = 5%
+
+🧾 Example 2 (even numbers):
+Returns = 2%, 4%, 6%, 8%
+Median = average of middle two = (4 + 6)/2 = 5%
+
+🔢 3. Mode
+The number that appears most often.
+
+🧾 Example:
+Returns = 4%, 6%, 6%, 7% → Mode = 6%
+
+🤓 When do we use each?
+Measure	Use When…
+Mean	You want the general average
+Median	Data has extreme values or outliers
+Mode	You want the most frequent value
+
+✅ PART 2: Dispersion
+💡 What is it?
+It tells you how spread out or volatile the numbers are. This is important in finance because more dispersion = more risk.
+
+🔢 1. Range
+Highest value − Lowest value
+
+🧾 Example:
+Returns = 3%, 6%, 9% → Range = 9 − 3 = 6%
+
+🔢 2. Variance (σ²)
+Tells you how much each number differs from the mean, on average.
+
+🧾 Steps:
+
+Find the mean
+
+Subtract mean from each value
+
+Square those results
+
+Find the average of those squared differences
+
+🔢 3. Standard Deviation (σ)
+It’s just the square root of the variance.
+
+It tells you how far typical values are from the average — and is widely used to measure risk in finance.
+
+🧾 Example:
+
+Mean return = 10%
+
+Standard deviation = 2%
+Most returns fall within 8% to 12%.
+
+🔢 4. Mean Absolute Deviation (MAD)
+Average of absolute differences from the mean (without squaring)
+
+Used less often in finance but gives a simpler view of variability.
+
+🔢 5. Chebyshev’s Inequality (don’t memorize, understand conceptually)
+It says: No matter the shape of data, most values lie within a few standard deviations from the mean.
+
+Distance from Mean	At least this % of values lie within it
+1 SD (σ)	At least 0% (nothing guaranteed)
+2 SD	At least 75%
+3 SD	At least 88.9%
+
+✅ Final Concepts
+🔢 Coefficient of Variation (CV)
+This compares risk (standard deviation) to return (mean).
+Helps choose investments with better risk-adjusted returns.
+
+🧾 Formula:
+CV = Standard Deviation ÷ Mean
+
+Lower CV = Better (less risk per unit of return)
+
+🧠 Summary Table
+Concept	What it tells you
+Mean	Average return
+Median	Middle return
+Mode	Most common return
+Range	Simple spread (max - min)
+Variance	Average squared difference from mean
+Standard Deviation	Risk or volatility (spread from mean)
+CV (Coefficient of Var)	Risk per unit of return
+
+========================================================================================================================================
+
+MODULE 3.2: Skewness, Kurtosis, and Correlation
+This module adds more detail to how investment returns behave by looking at:
+
+Skewness → Are returns symmetrical or lopsided?
+
+Kurtosis → Are returns tightly clustered or do they have extreme outcomes?
+
+Correlation → Do two investments move together or not?
+
+✅ 1. Skewness – Is the Distribution Lopsided?
+📌 What is it?
+Skewness tells us whether data is balanced around the average or not.
+
+📉 Types of Skew:
+Type of Skew	Shape	What It Means
+Symmetric (Skew = 0)	Bell-shaped	Equal chance of big gains/losses
+Positive Skew	Long tail to the right	More small losses, fewer big gains
+Negative Skew	Long tail to the left	More small gains, fewer big losses
+
+🧾 Example:
+
+Stock with rare huge gains = positive skew
+
+Investment with rare crashes = negative skew
+
+🔎 In Finance:
+Most investors dislike negative skew (big surprise losses)
+
+So we pay attention to this when comparing investments
+
+✅ 2. Kurtosis – How "Fat" Are the Tails?
+📌 What is it?
+Kurtosis tells us whether data has more or fewer extreme values than normal.
+
+Type of Kurtosis	Shape	What It Means
+Mesokurtic (Normal)	Bell-shaped	Typical ups and downs
+Leptokurtic	Fat tails	More extreme ups/downs (risky)
+Platykurtic	Thin tails	Fewer extreme outcomes (less risky)
+
+🧾 Example:
+
+Bitcoin returns = leptokurtic
+
+Bank savings returns = platykurtic
+
+📌 Why It Matters:
+Higher kurtosis = higher risk of extreme outcomes
+
+Used in risk management to prepare for market crashes or spikes
+
+✅ 3. Correlation – How Do Two Investments Move Together?
+📌 What is it?
+Correlation tells you if two things move in the same direction.
+
+It ranges from −1 to +1
+
+Correlation (r)	What It Means
++1	Perfect positive movement (same direction)
+0	No relationship
+−1	Perfect negative movement (opposite direction)
+
+🧾 Example:
+Stock A & Stock B have correlation = +0.9
+→ When A goes up, B usually goes up
+
+Gold & Stock Market = correlation around −0.3
+→ When stocks fall, gold may rise a little
+
+📈 Diversification Tip:
+If you combine investments with low or negative correlation, your overall risk goes down.
+This is a key idea in building smart portfolios.
+
+🧠 Summary Table
+Concept	What It Tells You	In Finance Means...
+Skewness	Is data lopsided?	Positive = big gains, Negative = big losses
+Kurtosis	Are extreme values likely?	High kurtosis = more crash/spike risk
+Correlation	Do two things move together?	Helps with diversification
